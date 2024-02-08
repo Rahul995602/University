@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+	<html>
+    <head>
+        <title>education</title>
+       
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		 <link rel="stylesheet" href="w3.css">
+		<script
+		  src="https://kit.fontawesome.com/66aa7c98b3.js"
+		  crossorigin="anonymous"
+		></script>
+        <style>
+              body {font-family: Arial, Helvetica, sans-serif;}
+			  
+              input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+              }
+              
+              button {
+                background-color: #043eaa;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+              }
+              
+              button:hover {
+                opacity: 0.8;
+              }
+              
+             
+              .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+              }
+              
+             
+              .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+              }
+              
+              img.avatar {
+                width: 40%;
+                border-radius: 50%;
+              }
+              
+              .container {
+                padding: 16px;
+              }
+              
+              span.psw {
+                float: right;
+                padding-top: 16px;
+              }
+              
+             
+              .modal {
+                display: none;
+                position: fixed; 
+                z-index: 1; 
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 80%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0,0.4); 
+                padding-top: 60px;}
+ 
+              .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; 
+                border: 1px solid #888;
+                width: 40%;
+				position:relative;
+				left:30%;
+				border-radius:20px;
+				box-shadow: 5px 10px 20px black;
+              }
+           
+              .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+              }
+              
+              .close:hover,
+              .close:focus {
+                color: red;
+                cursor: pointer;
+              }
+           h1{  	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+					text-shadow: 2px 2px 2px gray;
+					margin-right:90px;}
+					
+           marquee{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-size: 30px;
+                        }
+
+             
+              .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+              }
+                
+              @-webkit-keyframes animatezoom {
+                from {-webkit-transform: scale(0)} 
+                to {-webkit-transform: scale(1)}
+              }
+                
+              @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+              }
+				
+              @media screen and (max-width: 300px) {
+                span.psw {
+                   display: block;
+                   float: none;
+                }
+                .cancelbtn {
+                   width: 100%;
+                }
+              }
+			  ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: grey;
+			
+			}
+
+			li {  
+			  float: left;
+			}
+
+			.active,li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+
+			.active,li a:hover {
+			  background-color: #111;
+			}
+				* {
+				  margin: 0;
+				  padding: 0;
+				  box-sizing: border-box;
+				}
+
+				.footer {
+				  background-color: black;
+				  color: #fefefe;
+				  position:absolute;
+				  width: 100%;
+				  top:100%;
+				  left: 0;
+				}
+
+				.footer .heading {
+				  color: #fefefe;
+				  max-width: 1010px;
+				  width: 90%;
+				  text-transform: uppercase;
+				  margin: 0 auto;
+				  margin-bottom: 3rem;
+				  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+				}
+
+				.footer .content {
+				  display: flex;
+				  justify-content: space-evenly;
+				  margin: 1.5rem;
+				}
+
+				.footer .content p {
+				  margin-bottom: 1.3rem;
+				}
+
+				.footer .content a {
+				  text-decoration: none;
+				  color: #fefefe;
+				}
+
+				.footer .content a:hover {
+				  border-bottom: 1px solid #971717;
+				}
+
+				.footer .content h4 {
+				  margin-bottom: 1.3rem;
+				  font-size: 19px;
+				}
+
+				footer {
+				  text-align: center;
+				  margin-bottom: 2rem;
+				}
+
+				footer hr {
+				  margin: 2rem 0;
+				}
+
+			@media (max-width: 767px) {
+			  .footer .content {
+				display: flex;
+				flex-direction: column;
+				font-size: 14px;
+			  }
+
+			  .footer {
+				position: unset;
+			  }
+			}
+
+			@media (min-width: 768px) and (max-width: 1024px) {
+			  .footer .content,
+			  .footer {
+				font-size: 14px;
+			  }
+			}
+
+			@media (orientation: landscape) and (max-height: 500px) {
+			  .footer {
+				position: unset;
+			  }
+			}
+			h2{text-shadow: 5px 8px 8px #888888;
+				}
+			.si{position:absolute;
+				margin-top:20%;
+				margin-left:20%;
+				font-weight:bold;
+				font-size:16px;
+				}
+        </style>
+    </head>
+    <body>
+        <div class="w3-card-4 w3-round w3-display-middle" style="width:80% ">
+              <header class="w3-container w3-lightblue">
+              <h1>Harward University</h1>
+            </header>
+				
+
+                    <img src="img.jpg" style="width:60%">
+                 <footer class="w3-container w3-blue">
+                     <marquee behavior="alternate">student portal........</marquee>
+                  </footer>
+             <div class="w3-display-right">
+			 <h1>welcome to</h1>
+              <h2> Login Form</h2>
+              
+              <button onclick="document.getElementById('id01').style.display='block'" class="w3-padding" style="width:auto;">Login</button><br>
+				<hr>
+				<div class="si ">New User? sign in <br>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn w3-padding"><a href="signin.html">Sign in</a></button>
+                </div>
+              </div>
+              </div>
+              <div id="id01" class="modal">
+                
+                <form class="modal-content animate"   name="myform" method="post">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="book.jpg" alt="Avatar" class="avatar">
+                  </div>
+              
+                  <div class="container">
+                    <label for="name"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="name" >
+              
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" >
+                      
+                     <button type="button" value="Login" onclick="validateform()">Login</button>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                  </div>
+              
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a href="frgt.html">Forgot password?</a></span>
+                  </div>
+                </form>
+              </div>	
+	    <script>
+				var modal = document.getElementById('id01');
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+		
+				 function validateform(){  
+				 check= true;  
+					var name=document.myform.name.value;  
+					var password=document.myform.password.value;  
+					  
+					if (name==null || name==""){  
+					  alert("Name can't be blank");  
+					  check= false;  
+					}
+					if(password.length<6){  
+						alert("Password must be at least 6 characters long.");  
+						check= false;  
+					 }
+					if(check)
+					{
+						window.open("log2.html");
+					}
+				  
+				}   
+              </script>
+			   <div class="footer">
+			  <div class="heading">
+				<h2>Rahul<sup>™</sup></h2>
+			  </div>
+			  <div class="content">
+				<div class="services">
+				  <h4>Services</h4>
+				  <p><a href="#">App development</a></p>
+				  <p><a href="#">Web development</a></p>
+				  <p><a href="#">DevOps</a></p>
+				  <p><a href="#">Web designing</a></p>
+				</div>
+				<div class="social-media">
+				  <h4>Social</h4>
+				  <p>
+					<a href="#"
+					  ><i class="fab fa-linkedin"></i> Linkedin</a
+					>
+				  </p>
+				  <p>
+					<a href="#"
+					  ><i class="fab fa-twitter"></i> Twitter</a
+					>
+				  </p>
+				  <p>
+					<a href="https://github.com/farazc60"
+					  ><i class="fab fa-github"></i> Github</a
+					>
+				  </p>
+				  <p>
+					<a href="https://www.facebook.com/codewithfaraz"
+					  ><i class="fab fa-facebook"></i> Facebook</a
+					>
+				  </p>
+				  <p>
+				  <a href="https://www.instagram.com/codewithfaraz"
+					  ><i class="fab fa-instagram"></i> Instagram</a
+					>
+				  </p>
+				</div>
+				<div class="links">
+				  <h4>Quick links</h4>
+				  <p><a href="web.html">Home</a></p>
+				  <p><a href="course.html" >Courses</a></p>
+				  <p><a href="academics.html">Academics</a></p>
+				  <p><a href="contact.html">Contact</a></p>
+				  <p><a href="imgs.html">Images</a></p>
+				  <p><a href="about.html">About</a></p>				
+
+				</div>
+				<div class="details">
+				  <h4 class="address">Address</h4>
+				  <p>
+					Lorem ipsum dolor sit amet consectetur <br />
+					adipisicing elit. Cupiditate, qui!
+				  </p>
+				  <h4 class="mobile">Mobile</h4>
+				  <p><a href="#">+91-12225*****</a></p>
+				  <h4 class="mail">Email</h4>
+				  <p><a href="#">rahulc60@gmail.com</a></p>
+				</div>
+			  </div>
+			  <footer>
+				<hr />
+				
+				© 2022 codewithRahul.
+			  </footer>
+              </div>  
+             
+    </body>
+</html>
